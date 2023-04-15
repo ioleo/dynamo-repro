@@ -11,7 +11,6 @@ object Dependencies {
     val zioConfig      = "3.0.+"
     val zioInteropCats = "23.0.+"
     val zioJson        = "0.5.0"
-    val zioMock        = "1.0.0-RC9"
     val zioSchema      = "0.4.10"
 
     // logging
@@ -26,6 +25,7 @@ object Dependencies {
     // dynamo db
     val zioDynamoDb = "0.2.8+5-aa0fb167-SNAPSHOT"
     val zioAws      = "5.20.42.1"
+    val netty       = "4.1.86.Final"
   }
 
   lazy val rootDependencies =
@@ -73,7 +73,8 @@ object Dependencies {
   )
 
   lazy val dynamoDb = Seq(
-    "dev.zio" %% "zio-dynamodb" % v.zioDynamoDb
+    "dev.zio" %% "zio-dynamodb" % v.zioDynamoDb,
+    "io.netty" % "netty-all"    % v.netty
   )
 
   lazy val excludedDependencies: Seq[sbt.librarymanagement.InclExclRule] = Seq(
