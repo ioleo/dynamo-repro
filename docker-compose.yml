@@ -1,0 +1,9 @@
+version: "2.1"
+services:
+
+  dynamodb:
+    image: amazon/dynamodb-local
+    hostname: dynamodb
+    ports:
+      - 8000:8000
+    command: "-jar DynamoDBLocal.jar -inMemory"

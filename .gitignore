@@ -1,0 +1,10 @@
+.bsp/
+.vscode
+.metals
+.bloop
+.idea
+.env
+/project/project
+/project/metals.sbt
+target/
+**/*.semanticdb
